@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta name="robots" content="noindex">
+	
+	<title>Top Stories</title>
+	
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://registerguard.com/csp/cms/sites/rg/pages/popular/styles.css">
+	
+</head>
+<body>
+	
+	<script language="cache" runat="server">
+		
+		; Declare:
+		new pop
+		
+		; Get query string params:
+		set pop("publication") = $get(%request.Data("publication", 1), "rg") // Set default to rg.
+		set pop("section") = $zstrip($zconvert($get(%request.Data("section", 1), ""), "L"), "*W") // No spaces, make lowercase and use empty string by default.
+		set pop("stories") = $number(($get(%request.Data("stories", 1), 25) \ 1), 0) // Set default to 25 hits.
+		set pop("days") = $get(%request.Data("days", 1)) // Set default to 1 day.
+		set pop("hours") = $get(%request.Data("hours", 1)) // Set default to 1 hour.
+		
+	</script>
+	
+	<csp:object name="gPublication" classname="dt.cms.schema.Publication" objid="#(##class(dt.cms.support.Utilities).getPublicationID(pop("publication")))#" />
+	
+	<csp:if condition='$isobject(gPublication)'>
+		
+		<csp:object name="gSection" classname="dt.cms.schema.Section" objid="#(##class(dt.cms.support.Rules).getSectionID(gPublication, pop("section")))#" />
+		
+		<csp:parameter name="SERVER" VALUE="dtnews.guardnet.com" />
+		
+		<script language="cache" runat="server">
+			
+			; Instantiate vars
+			
+			set pop("mins") = 0
+			set pop("text") = ""
+			set pop("num") = 0
+			
+			if ($length(pop("hours"))) {
+				
+				; Validation:
+				set pop("hours") = $number((pop("hours") \ 1), 0) // https://groups.google.com/d/topic/intersystems-public-cache/gFvXTNjgq7o/discussion
+				
+				; If "hours" is not between 1 and 744 (hours in a 31 day month), default to 1 hour:
+				set:(( + pop("hours") < 1) || ( + pop("hours") > 744)) pop("hours") = 1
+				
+				; Set the number to the number of hours:
+				set pop("num") = pop("hours")
+				
+				; Set the text to hours or hour:
+				set pop("text") = $select((pop("hours") > 1):"hours", 1:"hour")
+				
+				; Convert hours to minutes:
+				set pop("mins") = (pop("hours") * 60)
+				
+			} elseif ($length(pop("days"))) {
+				
+				; Validation:
+				set pop("days") = $number((pop("days") \ 1), 0)
+				
+				; If "days" is not between 1 and 31, default to 1 day:
+				set:(( + pop("days") < 1) || ( + pop("days") > 31)) pop("days") = 1
+				
+				; Set the number to the number of days:
+				set pop("num") = pop("days")
+				
+				; Set the text to days or day:
+				set pop("text") = $select((pop("days") > 1):"days", 1:"day")
+				
+				; Convert days to minutes:
+				set pop("mins") = (pop("days") * 60 * 24)
+				
+			} else { 
+				
+				; Set defaults:
+				set pop("mins") = 60
+				set pop("num") = 1
+				set pop("text") = "hour"
+				
+			}
+			
+			; If stories returned is not between 1 and 50, default to 25 stories:
+			set:(( + pop("stories") < 1) || ( + pop("stories") > 50)) pop("stories") = 25
+			
+			; Get server info:
+			set pop("admin") = $case(%request.GetCgiEnv("SERVER_NAME"), ..#SERVER:1, :0)
+			
+		</script>
+		
+		<csp:if condition='($length(pop("section")) || (pop("hours") > 1) || (pop("days") >= 1))'>
+			<a id="home" class="button" href="stories.csp" title="Go back to beginning">Reset to default</a>
+		</csp:if>
+		
+		<div id="head">
+			<h1>Top #(pop("stories"))# stories going back #(pop("num"))# #(pop("text"))# (<custom:rg:apdatetime timestamp="#($SYSTEM.SQL.DATEADD("day", -(pop("mins") / (60 * 24)), $zdate(+$h, 3)))#" return="dateonly" />)</h1>
+				<form class="form-search">
+					Choose a
+					<csp:comment><label>section: <input type="text" class="input-medium search-query" maxlength="20" name="section" value="#(pop("section"))#" placeholder="#($case($length(pop("section")), 0:"(All)", :""))#"></label></csp:comment>
+					<label for="">section:</label>
+					<select name="section" class="form-control">
+						<option value="">(All)</option>
+						<csp:loop counter="x" from="1" to="#(gPublication.sections.Count())#">
+							#[ new label set label = $zconvert(gPublication.sections.GetAt(x).getLabel(), "L") ]#
+							<csp:if condition='label = pop("section")'>
+								<option value="#(label)#" selected="selected">#(##class(csp.rg.assets.methods.section).label(label))#</option>
+							<csp:else>
+								<option value="#(label)#">#(##class(csp.rg.assets.methods.section).label(label))#</option>
+							</csp:if>
+							#[ kill label ]#
+						</csp:loop>
+					</select>
+					and type
+					<label for="">hours:</label>
+					<input style="width:3em" type="text" class="input-medium search-query" maxlength="2" name="hours" value="#(pop("hours"))#" placeholder="#($case($length(pop("hours")), 0:$case($length(pop("days")), 0:"(1)", :""), :""))#">
+					or
+					<label for="">days:</label>
+					<input style="width:3em" type="text" class="input-medium search-query" maxlength="2" name="days" value="#($case($length(pop("hours")), 0:pop("days"), :""))#">
+					<button type="submit" class="btn">Submit</button>
+				</form>
+		</div>
+		
+		<div style="text-align:center;margin-bottom:5px;">
+			Presets: <a href="stories.csp?hours=1&amp;section=#(pop("section"))#">one hour back</a> (default) | <a href="?hours=6&amp;section=#(pop("section"))#">six hours back</a> | <a href="?days=1&amp;section=#(pop("section"))#">one day back</a> | <a href="?days=7&amp;section=#(pop("section"))#">seven days back</a> 
+		</div>
+		
+		<csp:if condition='($length(pop("section")) = 0) || $isobject(gSection)'>
+			
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>Story</th>
+						<th style="text-align:center">Views</th>
+						<th style="text-align:center">Author</th>
+						<th style="text-align:center">CMSStory ID</th>
+						<th style="text-align:center">Story slug</th>
+						<csp:if condition='pop("admin")'>
+							<th style="text-align:center">DBO created</th>
+						</csp:if>
+						<th style="text-align:center">
+							<csp:if condition='pop("admin")'>
+								cmsPubTracking
+								<br>
+								ASC (oldest)
+								<br>
+							</csp:if> 
+							First published
+						</th>
+						<csp:if condition='pop("admin")'>
+							<th style="text-align:center">cmsPubTracking<br>DESC (latest)</th>
+							<th style="text-align:center">DBO lastModTime</th>
+							<th style="text-align:center">publishedToWebDate<br>(modified)</th>
+						</csp:if>
+						<th style="text-align:center">Print published</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<dti:popular type="story" section="#(pop("section"))#" hits="#(pop("stories"))#" range="#(pop("mins"))#" publication="rg">
+						
+						<csp:comment> If not resutls (key=0) returned, nothing between the dti:popular tag will show. </csp:comment>
+						
+						<tr>
+							<td style="text-align:left"><dti:story:link target="_blank" cid="#(value.cmsStory.%Id())#" sid="#(value.section.%Id())#" fid="#(##class(dt.cms.schema.LayoutFull).%OpenId(value.section.defaultFullLayoutId).%Id())#">#(##class(csp.web.assets.methods.story).headline(value.cmsStory))#</dti:story:link></td>
+							<td>#(value.hits)#</td>
+							<td>#(##class(csp.rg.assets.methods.story).byline(value.cmsStory))#</td>
+							<td><a href="trace.csp?id=#(value.cmsStory.%Id())#&amp;section=#(pop("section"))#&amp;days=#(pop("days"))#&amp;hours=#(pop("hours"))#">#(value.cmsStory.%Id())#</a></td>
+							<td>#(value.cmsStory.getStory().storyName)#</td>
+							<csp:if condition='pop("admin")'>
+								<td><custom:rg:apdatetime timestamp="#(value.cmsStory.getStory().created)#" /></td>
+							</csp:if>
+							<td><custom:rg:apdatetime timestamp="#(##class(csp.rg.assets.methods.story).cmsPubTracking(value.cmsStory))#" /></td>
+							<csp:if condition='pop("admin")'>
+								<td><custom:rg:apdatetime timestamp="#(##class(csp.rg.assets.methods.story).cmsPubTracking(value.cmsStory, 1))#" /></td>
+								<td><custom:rg:apdatetime timestamp="#(value.cmsStory.getLastModified())#" /></td>
+								<td><custom:rg:apdatetime timestamp="#(value.cmsStory.publishedToWebDate)#" /></td>
+							</csp:if>
+							<td><custom:rg:apdatetime return="dateonly" timestamp="#(##class(csp.rg.assets.methods.story).runDate(value.cmsStory))#" /></td>
+						</tr>
+						
+					</dti:popular>
+					
+				</tbody>
+			</table>
+			<hr>
+			
+		<csp:else>
+			<div style="text-align:center;">
+				<div class="alert alert-danger" role="alert" style="display:inline-block;">Sorry, but that didn't work.</div>
+			</div>
+		</csp:if>
+		
+		<div class="info">
+			
+			<h3>To make custom queries:</h3>
+			<h5>By how many days ago you want to go back &hellip;</h5>
+			<pre><a href="?days=7">http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp<b>?days=7</b></a></pre>
+			<h5>&hellip; or hours &hellip;</h5>
+			<pre><a href="?hours=5">http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp<b>?hours=5</b></a></pre>
+			<h5>&hellip; or by section &hellip;</h5>
+			<pre><a href="?section=sports">http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp<b>?section=sports</b></a></pre>
+			<h5>&hellip; or by both &hellip;</h5>
+			<pre><a href="?days=10&amp;section=opinion">http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp<b>?section=opinion&amp;days=10</b></a></pre>
+			<p><b>Notes:</b></p>
+			<ul>
+				<li>The URL without a custom query defaults to one day and all sections.</li>
+				<li>You can see data from the past day (<code>days=1</code>) to the past 30 days (<code>days=30</code>).</li>
+				<li>You can see data from the past hour (<code>hours=1</code>) to the past 72 hours (<code>hours=72</code>).</li>
+				<li>Hours will trump days.</li>
+				<li>If you enter any other number, it will default back to the past day.</li>
+				<li>Click the <code>CMSStory ID</code> to view the <code>dt_cms_trace.Popular</code> table for that particular ID.</li>
+				<csp:if condition='pop("admin")'>
+					<li>For more information about the publish date/times visit <a href="https://github.com/registerguard/rg/wiki/Everything-we-know-about-DTI-timestamps">this WIKI page</a>.</li>
+					<li><b>Admins:</b> Switch to the <a href="http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp?section=#(pop("section"))#&amp;days=#(pop("days"))#&amp;hours=#(pop("hours"))#">public version of this page</a>.</li>
+				<csp:else>
+					<li><b>Admins:</b> Switch to the <a href="http://dtnews.guardnet.com/csp/cms/sites/rg/pages/popular/stories.csp?section=#(pop("section"))#&amp;days=#(pop("days"))#&amp;hours=#(pop("hours"))#">private version of this page</a>.</li>
+				</csp:if>
+			</ul>
+		</div>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		
+		<csp:if condition='pop("admin")'>
+			
+			<hr>
+			
+			<div class="info">
+				
+				<h3>Debug:</h3>
+				
+				<script language="cache" runat="server">
+					
+					; Debug:
+					write !, "<pre>"
+					try {
+						set currIO = ##class(%SYS.NLS.Device).SetIO("HTML")
+						zwrite
+					}
+					catch {
+						write "ERROR: ", $ZERROR
+					}
+					if $get(currIO) '= "" {
+						do ##class(%SYS.NLS.Device).SetIO(currIO)
+					}
+					write "</pre>"
+					
+				</script>
+				
+			</div>
+			
+		</csp:if>
+		
+		#[ kill pop ]#
+		
+	</csp:if>
+	
+</body>
+</html>
