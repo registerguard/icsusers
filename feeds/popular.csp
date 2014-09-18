@@ -15,6 +15,12 @@
 	set return = 1
 	
 	/**
+	 * Default publication:
+	 */
+	
+	set page("publication") = "rg"
+	
+	/**
 	 * Total number of popular items to return.
 	 */
 	
@@ -27,13 +33,13 @@
 	//--------------------------------------------------------------------------
 	
 	/**
-	 * JSONP callback.
+	 * JSONP callback name.
 	 *
 	 * Only allow alphanumeric, underscores, no leading numbers and l/r-trim spaces.
 	 * Default is an empty string.
 	 *
 	 * Example call:
-	 * http://site.com/pub/demos/json.csp?callback=foo
+	 * http://site.com/popular.csp?callback=foo
 	 *
 	 * jQuery $.getJSON() example:
 	 * ?callback=jQuery2110023872184265479546_1410218861295&page=1&format=json&_=1410218861296
@@ -51,7 +57,7 @@
 	 * Leading alpha characters are removed.
 	 *
 	 * Example call:
-	 * http://site.com/pub/demos/json.csp?page=3
+	 * http://site.com/popular.csp?page=3
 	 *
 	 * @see http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=RBAS_ointdiv
 	 * @see http://docs.intersystems.com/cache20091/csp/docbook/DocBook.UI.Page.cls?KEY=RSQL_abs
@@ -70,7 +76,7 @@
 	 * A number greater than the max becomes 20.
 	 *
 	 * Example call:
-	 * http://site.com/pub/demos/json.csp?per=15
+	 * http://site.com/popular.csp?page=3
 	 */
 	
 	set page("per") = $zabs($zstrip($get(%request.Data("per", 1), 20), "*E'N"))
@@ -258,7 +264,7 @@
 	
 	"stories": [
 		
-		#[ set page("popular") = ##class(dt.cms.trace.Popular).getPopular(page("type"), page("hits"), page("range"), ..get("section", ""), ..get("publication", "rg")) ]#
+		#[ set page("popular") = ##class(dt.cms.trace.Popular).getPopular(page("type"), page("hits"), page("range"), ..get("section", ""), ..get("publication", page("publication"))) ]#
 		
 		<csp:loop counter="x" from="#(page("start"))#" to="#(page("popular").Count())#">
 			
