@@ -43,6 +43,8 @@ For details, please read through the [source code](./popular.csp).
 
 ## Dependencies …
 
+Some of the below methods are drag/drop while others will require modifications to work on your system.
+
 ### … on [GitHub](https://github.com/):
 
 **[Pick](https://github.com/registerguard/pick)** / `##class(custom.rg.Pick).pics()`
@@ -55,17 +57,15 @@ If you can’t install the above code, you could remove it from [`popular.csp`](
 
 ### … as [Gists](https://gist.github.com/):
 
-Some of the below methods are drag/drop while others will require modifications to work on your system:
-
 Method | Description
 --- | ---
-[`getimagesize()`](https://gist.github.com/mhulse/382b0f46c3ad5f8a8357) | Width and height of image stream.
-[`meta()`](https://gist.github.com/mhulse/1aab2d8ee7e7559288a1) | Extracts caption from image stream.
-[`cmsPubTracking()`](https://gist.github.com/mhulse/33bb98b29f08bc1e2a10) | Earliest possible “published to web” date.
 [`byline()`](https://gist.github.com/mhulse/c493894e109a210f6ef4) | Author byline.
 [`catName()`](https://gist.github.com/mhulse/633f47c79ce671aae1b5) | Sub/category name from `subCategoryId`.
-[`subHeadline()`](https://gist.github.com/mhulse/9a2fe838f9f1fc3ae7c1) | Story deck.
+[`cmsPubTracking()`](https://gist.github.com/mhulse/33bb98b29f08bc1e2a10) | Earliest possible “published to web” date.
+[`getimagesize()`](https://gist.github.com/mhulse/382b0f46c3ad5f8a8357) | Width and height of image stream.
 [`headline()`](https://gist.github.com/mhulse/59ede19115960ee5a716) | Story headline.
+[`meta()`](https://gist.github.com/mhulse/1aab2d8ee7e7559288a1) | Extracts caption from image stream.
+[`subHeadline()`](https://gist.github.com/mhulse/9a2fe838f9f1fc3ae7c1) | Story deck.
 [`uri()`](https://gist.github.com/mhulse/43f68c1773d6a0a04dce) |  Story URL.
 
 ## Notes
@@ -80,4 +80,4 @@ Method | Description
 
 ## Questions?
 
-Don’t hesitate to contact me: <micky@registerguard.com>
+<micky@registerguard.com>
