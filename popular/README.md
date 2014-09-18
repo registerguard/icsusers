@@ -14,10 +14,10 @@ Some of the below methods are drag/drop while others will require modifications 
 
 Method | Description
 --- | ---
-[`label()`](https://gist.github.com/mhulse/382b0f46c3ad5f8a8357) | Get human-readable “label” for a section.
-[`headline()`](https://gist.github.com/mhulse/59ede19115960ee5a716) | Story headline.
 [`byline()`](https://gist.github.com/mhulse/c493894e109a210f6ef4) | Author byline.
 [`cmsPubTracking()`](https://gist.github.com/mhulse/33bb98b29f08bc1e2a10) | Earliest possible “published to web” date.
+[`headline()`](https://gist.github.com/mhulse/59ede19115960ee5a716) | Story headline.
+[`label()`](https://gist.github.com/mhulse/382b0f46c3ad5f8a8357) | Get human-readable “label” for a section.
 [`runDate()`](https://gist.github.com/mhulse/2bf966495e5da2ab2612) | Get story’s run date.
 
 ## Notes
