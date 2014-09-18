@@ -41,41 +41,43 @@ Parameter | Description | Example
 
 For details, please read through the [source code](./popular.csp).
 
-## Dependencies
+## Dependencies …
 
-A list of custom code dependencies follow.
+### … on [GitHub](https://github.com/):
 
-### [`##class(custom.rg.Pick).pics()`](https://github.com/registerguard/pick):
+**[Pick](https://github.com/registerguard/pick)** / `##class(custom.rg.Pick).pics()`
 
 > Get pictures attached to a story and order them by vieworder (+ a whole lot more!).
 
 > For use with DTI's ContentPublisher which is powered by Intersystem's Caché.
 
-If you can’t install the above code, you could remove it from [`popular.csp`](./popular.csp) and/or replace it with your own version.
+If you can’t install the above code, you could remove it from [`popular.csp`](./popular.csp) and/or replace it with your own image-getting code.
 
-### Custom:
+### … as [Gists](https://gist.github.com/):
 
-You’ll most likely have to replace this code with your own custom version:
+Some of the below methods are drag/drop while others will require modifications to work on your system:
 
 Method | Description
 --- | ---
-`getimagesize()` | Width and height of image stream.
-`meta()` | Extracts caption from image stream.
-`cmsPubTracking()` | Earliest possible “published to web” date.
-`byline()` | Author byline.
-`catName()` | Sub/category name from `subCategoryId`.
-`subHeadline()` | Story deck.
-`headline()` | Story headline.
-`uri()` |  Story URL.
-
-**Note:** All code listed above is available upon request: <micky@registerguard.com>
+[`getimagesize()`](https://gist.github.com/mhulse/382b0f46c3ad5f8a8357) | Width and height of image stream.
+[`meta()`](https://gist.github.com/mhulse/1aab2d8ee7e7559288a1) | Extracts caption from image stream.
+[`cmsPubTracking()`](https://gist.github.com/mhulse/33bb98b29f08bc1e2a10) | Earliest possible “published to web” date.
+[`byline()`](https://gist.github.com/mhulse/c493894e109a210f6ef4) | Author byline.
+[`catName()`](https://gist.github.com/mhulse/633f47c79ce671aae1b5) | Sub/category name from `subCategoryId`.
+[`subHeadline()`](https://gist.github.com/mhulse/9a2fe838f9f1fc3ae7c1) | Story deck.
+[`headline()`](https://gist.github.com/mhulse/59ede19115960ee5a716) | Story headline.
+[`uri()`](https://gist.github.com/mhulse/43f68c1773d6a0a04dce) |  Story URL.
 
 ## Notes
 
 * The code defaults to JSON; JSONP is an option if you utilize the `callback` query string parameter.
 * The maximum number of results is hard-coded to `100`; you can change this number by editing the `page("max")` delcaration/initialization.
-* If/when the requested page is out of range, the code will return a response status of `404 Not Found` (needed if using [Infinite Scroll](https://github.com/paulirish/infinite-scroll)).
+* If/when the requested page is out of range, the code will return a response status of `404 Not Found` (this is needed if using [Infinite Scroll](https://github.com/paulirish/infinite-scroll)).
 * Response is cached for 10 minutes and varies by `page` and `per` query string parameters.
 * The `getPopular()` method will grab results from entire publication; use `section` query string parameter to target a specific section.
-* The default `publication` is `rg`; you can change this value by editing the `page("publication")`  delcaration/initialization.
+* The default `publication` is `rg`; use `publication` query string parameter to target a specific publication.
 * Code tested on 7.7.3 Lighting, Cache for Windows (x86-64) 2009.1.5 (Build 901_0_11112U) Thu Dec 8 2011 18:33:08 GMTST.
+
+## Questions?
+
+Don’t hesitate to contact me: <micky@registerguard.com>
