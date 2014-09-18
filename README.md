@@ -1,6 +1,6 @@
-# ICS Users
+<img align="right" width="74" src="https://cloud.githubusercontent.com/assets/218624/4328551/07d6b362-3f87-11e4-97e3-a5d31463219f.png" alt="RG">
 
-<img align="right" width="100" src="https://cloud.githubusercontent.com/assets/218624/4327689/c8655f72-3f7b-11e4-970a-b8186a53c805.png" alt="RG">
+# ICS Users
 
 **A Register-Guard repository for the 2014 [iConnectSolutions Conference](http://iconnectsolutions.org/) (Sept. 21-24 in Minneapolis, Minnesota).**
 
@@ -17,7 +17,7 @@ We work at [The Register-Guard](http://registerguard.com), the main daily newspa
 
 This is our office:
 
-<a href="https://goo.gl/maps/yCzPH"><img align="right" width="100%" src="http://maps.googleapis.com/maps/api/streetview?size=640x200&location=44.0869857,-123.0523187&fov=90&heading=180&pitch=-5&key=AIzaSyChP3DxpEApWP91JtljgbBlOx4E2dmWHaY" alt="The Register-Guard: 3500 Chad Drive, Eugene, Oregon, 97408"></a>
+<p><a href="https://goo.gl/maps/yCzPH"><img align="right" width="100%" src="http://maps.googleapis.com/maps/api/streetview?size=640x200&location=44.0869857,-123.0523187&fov=90&heading=180&pitch=-5&key=AIzaSyChP3DxpEApWP91JtljgbBlOx4E2dmWHaY" alt="The Register-Guard: 3500 Chad Drive, Eugene, Oregon, 97408"></a></p>
 
 If you’re in town, stop by and say hi!
 
@@ -37,11 +37,11 @@ If you’re in town, stop by and say hi!
 
 > Fully responsive website powered by NEWSCYCLE Solutions’ Lighting Content Publisher.
 
-### [Register-Guard on GitHub](https://github.com/registerguard)
+### [Register-Guard on GitHub](https://github.com/registerguard):
 
 > Home of dynamic apps and other RG code created and maintained by the web team.
 
-### [RG Pages](http://pages.registerguard.com/)
+### [RG Pages](http://pages.registerguard.com/):
 
 > Special online presentations of static stories.
 
@@ -53,7 +53,7 @@ Visit the [RG Pages GitHub organization](https://github.com/rgpages).
 
 > Best viewed using recent operating systems and browsers.
 
-Visit [popular on GitHub](https://github.com/rgpages/popular/).
+Visit [this project on GitHub](https://github.com/rgpages/popular/).
 
 ---
 
