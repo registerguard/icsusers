@@ -22,7 +22,6 @@ The `popular.csp` CSP page generates JSON with this basic structure:
 			"server": "http://site.com"
 		}
 	]
-	
 }
 ```
 
@@ -42,21 +41,21 @@ Parameter | Description | Example
 
 For details, please read through the [source code](./popular.csp).
 
-## External/custom dependencies
+## Dependencies
 
-A list of custom code dependencies follow. You’ll most likely have to replace this code with your own custom version.
+A list of custom code dependencies follow.
 
-### `pics()`:
-
-This code depends upon [`##class(custom.rg.Pick).pics()`](https://github.com/registerguard/pick):
+### [`##class(custom.rg.Pick).pics()`](https://github.com/registerguard/pick):
 
 > Get pictures attached to a story and order them by vieworder (+ a whole lot more!).
 
 > For use with DTI's ContentPublisher which is powered by Intersystem's Caché.
 
-If you can’t install the above code, you could remove it from `popular.csp` and/or replace it with your own version.
+If you can’t install the above code, you could remove it from [`popular.csp`](./popular.csp) and/or replace it with your own version.
 
-Unless otherwise noted, all code listed below is available upon request: <micky@registerguard.com>
+### Custom:
+
+You’ll most likely have to replace this code with your own custom version:
 
 Method | Description
 --- | ---
@@ -68,6 +67,8 @@ Method | Description
 `subHeadline()` | Story deck.
 `headline()` | Story headline.
 `uri()` |  Story URL.
+
+**Note:** All code listed above is available upon request: <micky@registerguard.com>
 
 ## Notes
 
