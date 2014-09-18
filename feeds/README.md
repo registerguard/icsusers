@@ -68,6 +68,14 @@ Method | Description
 [`subHeadline()`](https://gist.github.com/mhulse/9a2fe838f9f1fc3ae7c1) | Story deck.
 [`uri()`](https://gist.github.com/mhulse/43f68c1773d6a0a04dce) |  Story URL.
 
+## In the wild
+
+Our [“Top 100 stories in the last 24 hours” page](http://pages.registerguard.com/popular/) utilizes the JSONP output:
+
+[![Popular](https://raw.githubusercontent.com/rgpages/popular/gh-pages/popular.gif)](http://pages.registerguard.com/popular/)
+
+Visit [this project on GitHub](https://github.com/rgpages/popular/).
+
 ## Notes
 
 * The code defaults to JSON; JSONP is an option if you utilize the `callback` query string parameter.

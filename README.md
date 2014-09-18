@@ -1,9 +1,10 @@
-# ICS Users
-
 <img align="right" width="74" src="https://cloud.githubusercontent.com/assets/218624/4328551/07d6b362-3f87-11e4-97e3-a5d31463219f.png" alt="RG">
 
-**A Register-Guard repository for the 2014 [iConnectSolutions Conference](http://iconnectsolutions.org/)**  
-Sept. 21-24 in Minneapolis, Minnesota.
+# RG’s ICS Users GitHub repository
+
+**[2014 iConnectSolutions Conference](http://iconnectsolutions.org/)**  
+[Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn)  
+Sept. 21-24
 
 ## Who we are
 
