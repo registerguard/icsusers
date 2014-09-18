@@ -1,6 +1,6 @@
-<a href="http://registerguard.com"><img align="right" width="200" src="https://cloud.githubusercontent.com/assets/218624/4327689/c8655f72-3f7b-11e4-970a-b8186a53c805.png" alt="RG"></a>
-
 # ICS Users
+
+<a href="http://registerguard.com"><img align="right" width="150" src="https://cloud.githubusercontent.com/assets/218624/4327689/c8655f72-3f7b-11e4-970a-b8186a53c805.png" alt="RG"></a>
 
 **A Register-Guard repository for the 2014 [iConnectSolutions Conference](http://iconnectsolutions.org/) (Sept. 21-24 in Minneapolis, Minnesota).**
 
