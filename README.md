@@ -2,7 +2,8 @@
 
 <img align="right" width="74" src="https://cloud.githubusercontent.com/assets/218624/4328551/07d6b362-3f87-11e4-97e3-a5d31463219f.png" alt="RG">
 
-**A Register-Guard repository for the 2014 [iConnectSolutions Conference](http://iconnectsolutions.org/) (Sept. 21-24 in Minneapolis, Minnesota).**
+**A Register-Guard repository for the 2014 [iConnectSolutions Conference](http://iconnectsolutions.org/)**  
+Sept. 21-24 in Minneapolis, Minnesota.
 
 ## Who we are
 
@@ -17,7 +18,7 @@ We work at [The Register-Guard](http://registerguard.com), the main daily newspa
 
 This is our office:
 
-<p><a href="https://goo.gl/maps/yCzPH"><img align="right" width="100%" src="http://maps.googleapis.com/maps/api/streetview?size=640x200&location=44.0869857,-123.0523187&fov=90&heading=180&pitch=-5&key=AIzaSyChP3DxpEApWP91JtljgbBlOx4E2dmWHaY" alt="The Register-Guard: 3500 Chad Drive, Eugene, Oregon, 97408"></a></p>
+<p><a href="https://goo.gl/maps/yCzPH"><img width="100%" src="http://maps.googleapis.com/maps/api/streetview?size=640x200&location=44.0869857,-123.0523187&fov=90&heading=180&pitch=-5&key=AIzaSyChP3DxpEApWP91JtljgbBlOx4E2dmWHaY" alt="The Register-Guard: 3500 Chad Drive, Eugene, Oregon, 97408"></a></p>
 
 If you’re in town, stop by and say hi!
 
