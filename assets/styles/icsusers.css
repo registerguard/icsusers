@@ -1,0 +1,122 @@
+* {
+	-webkit-transition: color 150ms linear;
+	   -moz-transition: color 150ms linear;
+	    -ms-transition: color 150ms linear;
+	     -o-transition: color 150ms linear;
+	        transition: color 150ms linear;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+html { height: 100%; }
+body {
+	font-size: 16px;
+	line-height: 24px;
+	font-family: Arial, sans-serif;
+	text-align: center;
+	color: #999;
+	background: #000 url(../images/watermark.png) no-repeat center center;
+	background-size: 1000px;
+	min-height: 100%;
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+}
+
+a,
+a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+.no-touch a:visited:hover,
+a:focus,
+.no-touch a:focus:hover,
+.no-touch a:hover,
+a:active { color: #fcb317; }
+
+::-moz-selection {
+	background: rgba(252, 179, 23, .55);
+	text-shadow: none;
+}
+::selection {
+	background: rgba(252, 179, 23, .55);
+	text-shadow: none;
+}
+
+div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+.items {
+	margin: 25px 0;
+	padding: 0;
+}
+.items li {
+	font-size: 16px;
+	line-height: 18px;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+	list-style: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-shadow:
+		#000 0 0 1px,
+		#000 0 0 5px;
+}
+.items li:first-child { margin-top: 0; }
+.items li:last-child { margin-bottom: 0; }
+@media all and (min-width: 640px) {
+	.items li {
+		font-size: 22px;
+		line-height: 24px;
+		letter-spacing: .08em;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.icon {
+	text-indent: -999em;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+	.icon a {
+		width: 100%;
+		height: 100%;
+		display: block;
+	}
+	.icon a:active,
+	.icon a:focus { outline: none; }
+
+#trg {
+	background-image: url(../images/trg.png);
+	width: 450px;
+	height: 61px;
+	margin-bottom: 35px;
+}
+#github {
+	background-image: url(../images/github.png);
+	width: 60px;
+	height: 60px;
+}
+#iconnectsolutions {
+	background-image: url(../images/iconnectsolutions.png);
+	width: 450px;
+	height: 86px;
+	margin-top: 25px;
+}
