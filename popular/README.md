@@ -1,7 +1,5 @@
 # “Popular” utility page
 
-<p><img width="100%" src="https://cloud.githubusercontent.com/assets/218624/4328853/af971128-3f8c-11e4-881f-c050420bccfa.gif" alt="A happy user"></a></p>
-
 This folder contains example code used to generate a “most popular” utility page, powered by [NEWSCYCLE Solutions’](http://www.newscyclesolutions.com/) `##class(dt.cms.trace.Popular).getPopular()` (a.k.a. `<dti:popular></dti:popular>`) code.
 
 ## Demo
