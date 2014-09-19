@@ -2,7 +2,9 @@
 
 <img align="right" width="74" src="https://cloud.githubusercontent.com/assets/218624/4328551/07d6b362-3f87-11e4-97e3-a5d31463219f.png" alt="RG">
 
-The Register-Guard’s ICS Users GitHub repository. [2014 iConnectSolutions Conference](http://iconnectsolutions.org/). [Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn). Sept. 21-24.
+The Register-Guard’s ICS Users GitHub repository. 
+[2014 iConnectSolutions Conference](http://iconnectsolutions.org/). 
+[Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn). Sept. 21-24.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas, leo quis laoreet ultrices, erat turpis pulvinar ex, ac porta eros justo in purus. Nullam id hendrerit risus. Curabitur finibus urna at justo consectetur, et consectetur arcu molestie.
 
