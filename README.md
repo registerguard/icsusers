@@ -1,12 +1,12 @@
-# RG’s ICS Users GitHub repository
+# Welcome!
 
 <img align="right" width="74" src="https://cloud.githubusercontent.com/assets/218624/4328551/07d6b362-3f87-11e4-97e3-a5d31463219f.png" alt="RG">
 
-**[2014 iConnectSolutions Conference](http://iconnectsolutions.org/)**  
-[Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn)  
-Sept. 21-24
+The Register-Guard’s ICS Users GitHub repository. [2014 iConnectSolutions Conference](http://iconnectsolutions.org/). [Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn). Sept. 21-24.
 
-## Who we are
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas, leo quis laoreet ultrices, erat turpis pulvinar ex, ac porta eros justo in purus. Nullam id hendrerit risus. Curabitur finibus urna at justo consectetur, et consectetur arcu molestie. Nullam ornare arcu libero, gravida consectetur augue efficitur eu. Aenean tempor id quam quis eleifend. Integer ut sollicitudin dui. Vestibulum sodales, sapien non feugiat fermentum, dolor orci tempor sapien, at condimentum velit mi in leo.
+
+## Who?
 
 Name | Title | GitHub user | At ICS?
 --- | --- | --- | ---
@@ -14,6 +14,8 @@ Carl Davaz | Deputy Managing Editor | [@carldavaz](https://github.com/carldavaz)
 Micky Hulse | Senior Digital Developer/Producer | [@mhulse](https://github.com/mhulse) | :white_check_mark:
 John Heasly | Digital Developer/Producer | [@jheasly](https://github.com/jheasly) | 
 Robert Denton | Digital Developer/Producer | [@robertdenton](https://github.com/robertdenton) | 
+
+## Where?
 
 We work at [The Register-Guard](http://registerguard.com), the main daily newspaper for [Eugene](https://goo.gl/maps/rhQzL), [Springfield](https://goo.gl/maps/N03FX), and [Lane County](https://goo.gl/maps/SxqBp), [Oregon](https://goo.gl/maps/QDBOs).
 
@@ -23,40 +25,6 @@ This is our office:
 
 If you’re in town, stop by and say hi!
 
-## Conference code
+## What next?
 
-### [“Popular” utility page](./popular/):
-
-> This folder contains example code used to generate a [JSON/P](http://json-jsonp-tutorial.craic.com/index.html) feed, powered by [NEWSCYCLE Solutions’](http://www.newscyclesolutions.com/) `##class(dt.cms.trace.Popular).getPopular()` (a.k.a. `<dti:popular></dti:popular>`) code.
-
-### [“Popular” JSON/P feed](./feeds/):
-
-> This folder contains example code used to generate a [JSON/P](http://json-jsonp-tutorial.craic.com/index.html) feed, powered by [NEWSCYCLE Solutions’](http://www.newscyclesolutions.com/) `##class(dt.cms.trace.Popular).getPopular()` (a.k.a. `<dti:popular></dti:popular>`) code.
-
-## Links
-
-### [The Register-Guard](http://registerguard.com):
-
-> Fully responsive website powered by NEWSCYCLE Solutions’ Lighting Content Publisher.
-
-### [Register-Guard on GitHub](https://github.com/registerguard):
-
-> Home of dynamic apps and other RG code created and maintained by the web team.
-
-### [RG Pages](http://pages.registerguard.com/):
-
-> Special online presentations of static stories.
-
-Visit the [RG Pages GitHub organization](https://github.com/rgpages).
-
-### [Top 100 stories in the last 24 hours](http://pages.registerguard.com/popular/):
-
-> An experimental BETA alternative “homepage” prototype for registerguard.com.
-
-> Best viewed using recent operating systems and browsers.
-
-Visit [this project on GitHub](https://github.com/rgpages/popular/).
-
----
-
-Copyright © 2014 [The Register-Guard](http://registerguard.com). All rights reserved.
+Visit the [WIKI](https://github.com/registerguard/icsusers/wiki)!
