@@ -8,20 +8,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas, leo quis
 
 ## Who?
 
-This is The Register-Guard web team:
+This is [The Register-Guard web team](mailto:webeditors@registerguard.com):
 
-Name | Title | GitHub | Twitter | At ICS?
---- | --- | --- | --- | ---
-Carl Davaz | Deputy Managing Editor | [@carldavaz](https://github.com/carldavaz) | [@carldavaz](https://twitter.com/carldavaz) | :white_check_mark:
-Micky Hulse | Senior Digital Developer/Producer | [@mhulse](https://github.com/mhulse) |  | :white_check_mark:
-John Heasly | Digital Developer/Producer | [@jheasly](https://github.com/jheasly) | [@jpheasly](https://twitter.com/jpheasly) |
-Robert Denton | Digital Developer/Producer | [@robertdenton](https://github.com/robertdenton) | [@robertrdenton](https://twitter.com/robertrdenton) | 
+Name | Title | GitHub | Twitter
+--- | --- | --- | ---
+[Carl Davaz](mailto:cd@registerguard.com) | Deputy Managing Editor | [@carldavaz](https://github.com/carldavaz) | [@carldavaz](https://twitter.com/carldavaz)
+[Micky Hulse](mailto:micky@registerguard.com) | Senior Digital Developer/Producer | [@mhulse](https://github.com/mhulse)
+[John Heasly](mailto:john.heasly@registerguard.com) | Digital Developer/Producer | [@jheasly](https://github.com/jheasly) | [@jpheasly](https://twitter.com/jpheasly)
+[Robert Denton](mailto:rob.denton@registerguard.com) | Digital Developer/Producer | [@robertdenton](https://github.com/robertdenton) | [@robertrdenton](https://twitter.com/robertrdenton)
 
 ## Where?
 
 We work at [The Register-Guard](http://registerguard.com), the main daily newspaper for [Eugene](https://goo.gl/maps/rhQzL), [Springfield](https://goo.gl/maps/N03FX), and [Lane County](https://goo.gl/maps/SxqBp), [Oregon](https://goo.gl/maps/QDBOs).
 
-This is our office:
+This is [our office](https://goo.gl/maps/yCzPH):
 
 <p><a href="https://goo.gl/maps/yCzPH"><img width="100%" src="http://maps.googleapis.com/maps/api/streetview?size=640x200&location=44.0869806,-123.0524588&fov=70&heading=140&pitch=0&key=AIzaSyChP3DxpEApWP91JtljgbBlOx4E2dmWHaY" alt="The Register-Guard: 3500 Chad Drive, Eugene, Oregon, 97408"></a></p>
 
@@ -29,4 +29,4 @@ If you’re in town, stop by and say hi! In the meantime, follow The Register-Gu
 
 ## What next?
 
-Visit the [WIKI](https://github.com/registerguard/icsusers/wiki)!
+**Visit the [WIKI](https://github.com/registerguard/icsusers/wiki)!**
