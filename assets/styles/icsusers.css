@@ -105,9 +105,15 @@ div {
 
 #trg {
 	background-image: url(../images/trg.png);
-	width: 450px;
-	height: 61px;
+	width: 280px;
+	height: 38px;
 	margin-bottom: 35px;
+}
+@media all and (min-width: 640px) {
+	#trg {
+		width: 450px;
+		height: 61px;
+	}
 }
 #github {
 	background-image: url(../images/github.png);
@@ -116,7 +122,13 @@ div {
 }
 #iconnectsolutions {
 	background-image: url(../images/iconnectsolutions.png);
-	width: 450px;
-	height: 86px;
+	width: 280px;
+	height: 54px;
 	margin-top: 25px;
+}
+@media all and (min-width: 640px) {
+	#iconnectsolutions {
+		width: 450px;
+		height: 86px;
+	}
 }
