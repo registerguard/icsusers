@@ -4,7 +4,7 @@
 
 The Register-Guard’s iConnectSolutions User Group GitHub repository.
 
-Presentation contributions for Content/Digital sessions at the [2014 iConnectSolutions Conference](http://iconnectsolutions.org/) in [Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn),  Sept. 21-24.
+Presentation contributions for Content/Digital track sessions at the [2014 iConnectSolutions Conference](http://iconnectsolutions.org/) in [Minneapolis](https://goo.gl/maps/Atb6W), [Minnesota](https://goo.gl/maps/6GhVn),  Sept. 21-24.
 
 ## Who?
 
