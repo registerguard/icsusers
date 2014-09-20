@@ -6,7 +6,7 @@ This folder contains example code used to generate a “most popular” utility 
 
 <p><a href="http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp"><img width="100%" src="https://cloud.githubusercontent.com/assets/218624/4343663/7b03f890-405e-11e4-92f5-9bccfd3b9db8.gif" alt="Animated gif demonstration"></a></p>
 
-Check out a [live example](http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp).
+View the [live page](http://registerguard.com/csp/cms/sites/rg/pages/popular/stories.csp).
 
 ## Dependencies …
 
