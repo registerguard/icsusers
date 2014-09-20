@@ -10,7 +10,7 @@ Presentation contributions for Content/Digital track sessions at the [2014 iConn
 
 This is [The Register-Guard web team](mailto:webeditors@registerguard.com):
 
-Name | Title | GitHub | Twitter
+Name/e-mail | Title | GitHub | Twitter
 --- | --- | --- | ---
 [Carl Davaz](mailto:cd@registerguard.com) | Deputy Managing Editor | [@carldavaz](https://github.com/carldavaz) | [@carldavaz](https://twitter.com/carldavaz)
 [Micky Hulse](mailto:micky@registerguard.com) | Senior Digital Developer/Producer | [@mhulse](https://github.com/mhulse)
@@ -29,4 +29,4 @@ If you’re in town, stop by and say hi! In the meantime, follow The Register-Gu
 
 ## What next?
 
-**Visit the [WIKI](https://github.com/registerguard/icsusers/wiki)!**
+Visit the [WIKI](https://github.com/registerguard/icsusers/wiki)!
