@@ -29,4 +29,9 @@ If you’re in town, stop by and say hi! In the meantime, follow The Register-Gu
 
 ## What next?
 
-Visit the [WIKI](https://github.com/registerguard/icsusers/wiki)!
+Visit these [WIKI](https://github.com/registerguard/icsusers/wiki) pages:
+
+1. [Making underdeveloped DT tools useful](https://github.com/registerguard/icsusers/wiki/1.-Making-underdeveloped-DT-tools-useful)
+2. [Third-party Tools to Enhance Your Site](https://github.com/registerguard/icsusers/wiki/2.-Third-party-Tools-to-Enhance-Your-Site)
+3. [Laying it Out There](https://github.com/registerguard/icsusers/wiki/3.-Laying-it-Out-There)
+4. [Picture this](https://github.com/registerguard/icsusers/wiki/4.-Picture-this)
