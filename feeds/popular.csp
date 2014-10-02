@@ -337,7 +337,6 @@
 	//
 	//--------------------------------------------------------------------------
 	
-	; Debug:
 	write !, "<pre>"
 	try {
 		set currIO = ##class(%SYS.NLS.Device).SetIO("HTML")
